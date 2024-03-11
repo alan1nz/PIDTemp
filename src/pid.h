@@ -1,16 +1,5 @@
 #include <stdint.h>
-
-// typedef struct
-// {
-//     float previousError;
-//     float previousOutput;
-// } PIDMemoryTypeDef_t;
-
-// typedef struct
-// {
-//     float upperLimit;
-//     float lowerLimit;
-// } LimitsTypeDef_t;
+#include <stdio.h>
 
 typedef struct
 {
@@ -24,3 +13,5 @@ typedef struct
     float previousError;
     float previousOutput;
 } PIDTypeDef_t;
+
+float calc_pid_output(PIDTypeDef_t *pidObject, float currentOutput);

@@ -9,7 +9,7 @@
       "stopAtEntry": false,
       "externalConsole": true,
       "cwd": "d:/PIDTemp",
-      "program": "d:/PIDTemp/build/Debug/outDebug",
+      "program": "d:/PIDTemp/build/test/pidTest.exe",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

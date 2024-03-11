@@ -1,0 +1,26 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cmake",
+			"label": "CMake: test",
+			"command": "test",
+			"problemMatcher": [],
+			"detail": "CMake template test task",
+		},
+		{
+			"label": "gtest",
+			"type": "shell",
+			"args": ["--gtest_color=yes"],
+			"command": "${workspaceFolder}/build/test/pidTest.exe",
+			"problemMatcher": []
+		},
+		// {
+		// 	"label": "gtest",
+		// 	"type": "shell",
+		// 	"args": ["--gtest_color=yes"],
+		// 	"command": "${workspaceFolder}/build/test/pidTest.exe",
+		// 	"problemMatcher": []
+		// }
+	]
+}
