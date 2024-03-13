@@ -7,6 +7,21 @@ static float calc_error(float reference, float currentOutput)
 
 static float saturate_output(PIDTypeDef_t *pidObject, float unsatOutput)
 {
+    float ret = 0;
+    if (unsatOutput > pidObject->upperLimit)
+    {
+        ret = pidObject->upperLimit;
+    }
+    else if (unsatOutput < pidObject->lowerLimit)
+    {
+        ret = pidObject->lowerLimit;
+    }
+    else
+    {
+        ret = unsatOutput;
+    }
+
+    return ret;
 }
 
 static float calc_proportional(PIDTypeDef_t *pidObject)
@@ -21,6 +36,11 @@ static float calc_integral(PIDTypeDef_t *pidObject)
     float newOutput = newIntegral + pidObject->previousError + pidObject->previousOutput;
 
     newOutput = saturate_output(pidObject, newOutput);
+
+    // Update the integral memories
+    pidObject->previousError = newIntegral;
+    pidObject->previousOutput = newOutput;
+
     return newOutput;
 }
 
@@ -38,10 +58,11 @@ float calc_pid_output(PIDTypeDef_t *pidObject, float currentOutput)
     pidObject->error = error;
 
     float proportional = calc_proportional(pidObject);
-
     float integral = calc_integral(pidObject);
+    float sum = proportional + integral;
+    sum = saturate_output(pidObject, sum);
 
-    return (proportional + integral);
+    return sum;
 
     // calc_error(pidObject->referencePoint, currentOutput);
     // float proportional = calc_proportional(pidObject);

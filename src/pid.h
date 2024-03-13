@@ -6,8 +6,8 @@ typedef struct
     float kI;
     float KP;
     float kD;
-    uint32_t upperLimit;
-    uint32_t lowerLimit;
+    float upperLimit;
+    float lowerLimit;
     float error;
     float referencePoint;
     float previousError;

@@ -11,11 +11,40 @@
   </component>
   <component name="CMakeRunConfigurationManager">
     <generated>
-      <config projectName="pidTest" targetName="gmock" />
-      <config projectName="pidTest" targetName="pidTest" />
-      <config projectName="pidTest" targetName="gtest_main" />
-      <config projectName="pidTest" targetName="gtest" />
-      <config projectName="pidTest" targetName="gmock_main" />
+      <config projectName="pid" targetName="pidLib" />
+      <config projectName="pid" targetName="ExperimentalMemCheck" />
+      <config projectName="pid" targetName="NightlyBuild" />
+      <config projectName="pid" targetName="NightlyUpdate" />
+      <config projectName="pid" targetName="ExperimentalCoverage" />
+      <config projectName="pid" targetName="gmock_main" />
+      <config projectName="pid" targetName="ContinuousStart" />
+      <config projectName="pid" targetName="ContinuousConfigure" />
+      <config projectName="pid" targetName="NightlyStart" />
+      <config projectName="pid" targetName="gmock" />
+      <config projectName="pid" targetName="pidTest" />
+      <config projectName="pid" targetName="ContinuousMemCheck" />
+      <config projectName="pid" targetName="ExperimentalUpdate" />
+      <config projectName="pid" targetName="gtest" />
+      <config projectName="pid" targetName="ContinuousSubmit" />
+      <config projectName="pid" targetName="NightlyMemoryCheck" />
+      <config projectName="pid" targetName="Continuous" />
+      <config projectName="pid" targetName="ContinuousTest" />
+      <config projectName="pid" targetName="NightlyMemCheck" />
+      <config projectName="pid" targetName="NightlyCoverage" />
+      <config projectName="pid" targetName="ContinuousUpdate" />
+      <config projectName="pid" targetName="ExperimentalStart" />
+      <config projectName="pid" targetName="ExperimentalBuild" />
+      <config projectName="pid" targetName="ExperimentalConfigure" />
+      <config projectName="pid" targetName="gtest_main" />
+      <config projectName="pid" targetName="ExperimentalTest" />
+      <config projectName="pid" targetName="NightlyTest" />
+      <config projectName="pid" targetName="ExperimentalSubmit" />
+      <config projectName="pid" targetName="Nightly" />
+      <config projectName="pid" targetName="NightlySubmit" />
+      <config projectName="pid" targetName="NightlyConfigure" />
+      <config projectName="pid" targetName="ContinuousBuild" />
+      <config projectName="pid" targetName="ContinuousCoverage" />
+      <config projectName="pid" targetName="Experimental" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -26,11 +55,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca74cef7-dac5-46cf-8b21-da97f47ae34e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/launch.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pid.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/pid.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pid.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/pid.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/pidTest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/pidTest.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +69,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug-Coverage" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
@@ -64,6 +93,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Google Test.All in pidTest.cpp.executor": "Run",
+    "Google Test.CALC_ERROR.EP_CURRENT_1.executor": "Run",
     "Google Test.CALC_INTEGRAL.INTEGRAL_POSITIVE_TEST.executor": "Run",
     "Google Test.pidTest.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -79,31 +109,30 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "project.propVCSSupport.Mappings",
+    "settings.editor.selected.configurable": "CMakeSettings",
     "structure.view.defaults.are.configured": "true",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Google Test.CALC_ERROR.EP_CURRENT_1">
+  <component name="RunManager" selected="Google Test.All in pidTest.cpp">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="All in pidTest.cpp" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pid" TARGET_NAME="pidTest" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="pid" RUN_TARGET_NAME="pidTest" TEST_PATTERN="all-tests(file://$PROJECT_DIR$/test/pidTest.cpp)" TEST_MODE="PATTERN">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
         <option name="BeforeTestRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CALC_ERROR.EP_CURRENT_1" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pid" TARGET_NAME="pidTest" RUN_TARGET_PROJECT_NAME="pid" RUN_TARGET_NAME="pidTest" TEST_CLASS="CALC_ERROR" TEST_METHOD="EP_CURRENT_1" TEST_MODE="SUITE_TEST">
+    <configuration name="CALC_ERROR.EP_CURRENT_1" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pid" TARGET_NAME="pidTest" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="pid" RUN_TARGET_NAME="pidTest" TEST_CLASS="CALC_ERROR" TEST_METHOD="EP_CURRENT_1" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
         <option name="BeforeTestRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="CALC_INTEGRAL.INTEGRAL_POSITIVE_TEST" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pid" TARGET_NAME="pidTest" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="pid" RUN_TARGET_NAME="pidTest" TEST_CLASS="CALC_INTEGRAL" TEST_METHOD="INTEGRAL_POSITIVE_TEST" TEST_MODE="SUITE_TEST">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-        <option name="BeforeTestRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="pidTest" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pid" TARGET_NAME="pidTest" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="pid" RUN_TARGET_NAME="pidTest" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
         <option name="BeforeTestRunTask" enabled="true" />
@@ -249,11 +278,6 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="gmock" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pid" TARGET_NAME="gmock" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -286,10 +310,6 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="CMake Application.gmock" />
-      <item itemvalue="CMake Application.gmock_main" />
-      <item itemvalue="CMake Application.gtest" />
-      <item itemvalue="CMake Application.gtest_main" />
       <item itemvalue="CMake Application.Continuous" />
       <item itemvalue="CMake Application.ContinuousBuild" />
       <item itemvalue="CMake Application.ContinuousConfigure" />
@@ -319,17 +339,20 @@
       <item itemvalue="CMake Application.NightlyTest" />
       <item itemvalue="CMake Application.NightlyUpdate" />
       <item itemvalue="CMake Application.pidLib" />
+      <item itemvalue="CMake Application.gmock" />
+      <item itemvalue="CMake Application.gmock_main" />
+      <item itemvalue="CMake Application.gtest" />
+      <item itemvalue="CMake Application.gtest_main" />
       <item itemvalue="CTest Application.All CTest" />
-      <item itemvalue="Google Test.pidTest" />
       <item itemvalue="Google Test.CALC_ERROR.EP_CURRENT_1" />
       <item itemvalue="Google Test.All in pidTest.cpp" />
       <item itemvalue="Google Test.CALC_INTEGRAL.INTEGRAL_POSITIVE_TEST" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Google Test.All in pidTest.cpp" />
         <item itemvalue="Google Test.CALC_ERROR.EP_CURRENT_1" />
         <item itemvalue="Google Test.CALC_INTEGRAL.INTEGRAL_POSITIVE_TEST" />
-        <item itemvalue="Google Test.All in pidTest.cpp" />
       </list>
     </recent_temporary>
   </component>
@@ -344,7 +367,8 @@
       <workItem from="1709816221164" duration="9000" />
       <workItem from="1710151614065" duration="104000" />
       <workItem from="1710151922689" duration="674000" />
-      <workItem from="1710152607740" duration="4141000" />
+      <workItem from="1710152607740" duration="4767000" />
+      <workItem from="1710237431680" duration="1280000" />
     </task>
     <servers />
   </component>
@@ -384,7 +408,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/test/pidTest.cpp</url>
-          <line>131</line>
+          <line>137</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
