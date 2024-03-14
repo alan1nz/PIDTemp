@@ -15,3 +15,4 @@ typedef struct
 } PIDTypeDef_t;
 
 float calc_pid_output(PIDTypeDef_t *pidObject, float currentOutput);
+void reset_pid_memory(PIDTypeDef_t *pidObject);

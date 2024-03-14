@@ -756,3 +756,73 @@ TEST(PID_INTEGRATION_TEST, CC_CV_TRANSITION_TEST)
     EXPECT_EQ(uint32_t(currentReference * 1000), 1775);
     EXPECT_EQ(uint32_t(1000 * phase), 93269); // Theorectically 93.268% but just decimal rounding
 }
+
+/**
+ * @brief This test injects negative voltage to the PID to check its response
+ *
+ */
+TEST(FAULT_INJECTION, FAULT_NEGATIVE_VOLTAGE)
+{
+    PIDTypeDef_t pidObject;
+    pidObject.KP = 4;
+    pidObject.kI = 0.75;
+    pidObject.lowerLimit = 0;
+    pidObject.upperLimit = 3;
+    pidObject.referencePoint = 50.4;
+
+    float currentReference = calc_pid_output(&pidObject, -3);
+    EXPECT_EQ(currentReference, 3);
+}
+
+/**
+ * @brief This test injects negative voltage and current to the PID to check its response
+ *
+ */
+TEST(FAULT_INJECTION, FAULT_NEGATIVE_VOLTAGE_1)
+{
+    PIDTypeDef_t pidObject;
+    pidObject.KP = 4;
+    pidObject.kI = 0.75;
+    pidObject.lowerLimit = 0;
+    pidObject.upperLimit = 3;
+    pidObject.referencePoint = 50.4;
+
+    PIDTypeDef_t currentStage;
+    currentStage.kI = 0.5;
+    currentStage.lowerLimit = 0;
+    currentStage.upperLimit = 100;
+
+    float currentReference = calc_pid_output(&pidObject, -3);
+
+    currentStage.referencePoint = currentReference;
+
+    float phase = calc_pid_output(&currentStage, -3);
+
+    EXPECT_EQ(phase, 3);
+}
+
+/**
+ * @brief This test injects negative voltage and current to the PID to check its response
+ *
+ */
+TEST(INTEGRAL_RESET, INTEGRAL_RESET_1)
+{
+    PIDTypeDef_t pidObject;
+    pidObject.KP = 4;
+    pidObject.kI = 0.75;
+    pidObject.lowerLimit = 0;
+    pidObject.upperLimit = 3;
+    pidObject.referencePoint = 50.4;
+
+    float currentReference;
+
+    for (uint8_t i = 0; i < 10; i++)
+    {
+        calc_pid_output(&pidObject, -3);
+    }
+
+    reset_pid_memory(&pidObject);
+    EXPECT_EQ(pidObject.error, 0);
+    EXPECT_EQ(pidObject.previousError, 0);
+    EXPECT_EQ(pidObject.previousOutput, 0);
+}

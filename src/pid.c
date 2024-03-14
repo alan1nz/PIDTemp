@@ -63,14 +63,22 @@ float calc_pid_output(PIDTypeDef_t *pidObject, float currentOutput)
     sum = saturate_output(pidObject, sum);
 
     return sum;
+}
 
-    // calc_error(pidObject->referencePoint, currentOutput);
-    // float proportional = calc_proportional(pidObject);
-    // float integral = calc_integral(pidObject);
+/**
+ * @brief This function resets the memory elements of the integral controller
+ *
+ * @param pidObject representing a generic type which can be the voltage or the current stage
+ * @note may want to manually reset the current stage reference
+ */
+void reset_pid_memory(PIDTypeDef_t *pidObject)
+{
+    if (pidObject == NULL)
+    {
+        return;
+    }
 
-    // float ret = 0;
-
-    // ret = proportional + integral;
-
-    // ret = saturate_output(pidObject, ret);
+    pidObject->error = 0;
+    pidObject->previousOutput = 0;
+    pidObject->previousError = 0;
 }
